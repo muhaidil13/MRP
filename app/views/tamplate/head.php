@@ -58,12 +58,13 @@
                             Laporan
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/supplier/index">Supplier</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/supplier/index">Laporan
+                                    Material</a></li>
                             <li><a class="dropdown-item" href="<?php echo BASE_URL?>/costumers/index">Costumers</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">Laporan Inventory</a></li>
                         </ul>
                     </li>
 
@@ -75,12 +76,12 @@
                             User
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/supplier/index">Level</a></li>
-                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/costumers/index">Akun</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/akun/level">Level</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/akun/list">Akun</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Keluar</a></li>
+                            <li><a class="dropdown-item" href="/akun/keluar">Keluar</a></li>
                         </ul>
                     </li>
                 </ul>
