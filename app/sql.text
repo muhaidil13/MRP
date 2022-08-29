@@ -1,0 +1,5 @@
+select A.material_sku, A.lead_time, B.material_name, C.category_name from ((material as A inner join material_item as B on A.material_code = B.material_code) inner join material_category as C on B.category_id = C.category_id);
+
+if not exists (select * from Delegates d where d.FromYr = @FromYr and d.MemNo = @MemNo)
+    INSERT INTO Delegates ([MemNo],[FromYr],[ToYr]) values(@MemNo, @FromYr,@ToYr)
+
