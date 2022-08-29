@@ -17,7 +17,12 @@ class Product extends Controller{
             Flasher::setFlash("Gagal", "Di Delete", "danger ");
             header("Location: " . BASE_URL . "/product");
             exit;
-        
         }
+    }
+    public function tambah_product(){
+        $data['title'] = "Tambah product";
+        $this->view("tamplate/head", $data);
+        $this->view("product/add_product");
+        $this->view("tamplate/footer");
     }
 }

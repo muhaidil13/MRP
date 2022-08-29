@@ -49,19 +49,8 @@
                             <li><a class="dropdown-item" href="<?php echo BASE_URL?>/material/index">Material</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            MRP
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/supplier/index">Supplier</a></li>
-                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/costumers/index">Costumers</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="<?php echo BASE_URL?>/proses/index">MRP</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
