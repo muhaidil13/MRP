@@ -25,7 +25,6 @@ class Material_model{
         $this->db->query($query);
         $this->db->bind("unit", $data['unit']);
         $this->db->execute();
-        $this->db->result();
         if($this->db->rowCount() > 0){
             Flasher::setFlash("Gagal", "Ditambahkan", "danger ");
             header("Location: " . BASE_URL . "/material/tambah_material");
