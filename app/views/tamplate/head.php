@@ -76,12 +76,12 @@
                             User
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/akun/level">Level</a></li>
-                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/akun/list">Akun</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/system/level">Level</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/system/list">Akun</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="/akun/keluar">Keluar</a></li>
+                            <li><a class="dropdown-item" href="/system/keluar">Keluar</a></li>
                         </ul>
                     </li>
                 </ul>

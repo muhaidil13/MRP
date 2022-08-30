@@ -1,0 +1,17 @@
+{
+    "name": "farid/mvc-1",
+    "autoload": {
+        "psr-4": {
+            "Farid\\Mvc1\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muh Farid Wajdi A",
+            "email": "muhaidil754@gmail.com"
+        }
+    ],
+    "require": {
+        "emarref/jwt": "^1.0"
+    }
+}
