@@ -81,7 +81,7 @@
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="/system/keluar">Keluar</a></li>
+                            <li><a class="dropdown-item" href="<?php echo BASE_URL?>/system/keluar">Keluar</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -27,17 +27,18 @@
 </head>
 
 <body>
+    <p><?php Flasher::flash()?></p>
     <div class="container" style="width:70vw;">
         <div class="background">
             <h3 class="text-login">Form Login</h3>
             <form class="row g-3" action="<?php echo BASE_URL?>/system/cek_login" method="POST">
                 <div class="col-12">
                     <label for="username" class="form-label">Username</label>
-                    <input type="text" class="form-control" id="username" name="username">
+                    <input type="text" class="form-control" id="username" name="username" required>
                 </div>
                 <div class="col-12">
                     <label for="password" class="form-label">Password</label>
-                    <input type="text" class="form-control" id="password" name="password">
+                    <input type="password" class="form-control" id="password" name="pass" required>
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Login</button>

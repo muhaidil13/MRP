@@ -1,3 +1,4 @@
+<p><?php Flasher::flash()?></p>
 <div class="container-sm mt-5" style="width: 85vw;">
     <p class="mt-2">Alert</p>
     <h3>Welcome user </h3>
