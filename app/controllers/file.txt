@@ -1,0 +1,80 @@
+   $data = [
+            'nama_user' => '',
+            'username' => '',
+            'email' => '',
+            'level_id' => '',
+            'password' => '',
+            'usernameError' => '',
+            'emailError' => '',
+            'passwordconfirm' => '',
+            'passwordError' => '',
+            'passwordconfirmError' => ''
+        ];
+        if($_SERVER['REQUEST_METHOD'] = 'POST'){
+            $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+            $data = [
+                'nama_user' => trim($_POST['nama_user']),
+                'username' => trim($_POST['username']),
+                'level_id' => trim($_POST['level_id']),
+                'email' => trim($_POST['email']),
+                'password' => trim($_POST['password']),
+                'passwordconfirm' => trim($_POST['passwordconfirm']),
+                'usernameError' => '',
+                'emailError' => '',
+                'passwordError' => '',
+                'passwordconfirmError' => ''
+            ];
+            // String Maching
+            $nameValidation = "/^[a-zA-Z0-9]*$/";
+            $passwordValidation = "/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
+
+            // // Validation on letter number
+            // if(empty($data['username'])){
+            //     $data['usernameError'] = "Please Enter Username";
+            // }elseif(!preg_match($nameValidation, $data['username'])){
+            //     $data['usernameError'] = "Only Letter And number";
+            // }
+            
+            // // validaion password 
+            // if(empty($data['email'])){
+            //     $data['emailError'] = "Please Enter email";
+            // }elseif(!filter_var($data['email'], FILTER_VALIDATE_EMAIL)){
+            //     $data['emailError'] = "Correct Format";
+            // }else{
+            //     // Jika email Sudah Ada
+            //     if($this->model("System_model")->findbyEmail($data['email'])){
+            //         $data['emailError'] = 'Email is already taken.';
+            //     }
+            // }
+
+            // // Validation Confirm Password
+            // if(empty($data['passwordconfirm'])){
+            //     $data['passwordconfirmError'] = "Data Tidak Boleh Kodong";
+            // }elseif($data['passwordconfirm'] != $data['password']){
+            //     $data['passwordconfirmError'] = "Password Tidak Kembar";
+            // }
+
+            // // Validate Password length and number
+            // if(empty($data['password'])){
+            //     $data['passwordError'] = "Please Enter Password";
+            // }elseif(strlen($data['password']) < 6){
+            //     $data['passwordError'] = "Length Min 7";
+            // }elseif(preg_match($passwordValidation, $data['password'])){
+            //     $data['passwordError'] = "Must Contain last one number";
+            // }
+            
+            
+            // Cek Jika Tidak Ada Eror
+            if(empty($data['usernameError']) && empty($data['emailError']) && empty($data['passwordError']) && empty($data['passwordconfirmError'])){
+                $data["password"] = password_hash($data['password'],PASSWORD_DEFAULT);
+
+                // Daftarkan User
+                if($this->model("System_model")->register($data)){
+                    header("Location: " . BASE_URL . "/home");
+                }
+            }
+        }
+        var_dump($data);
+        $data['title'] = "Buat User";
+        $this->view("system/signup", $data);
+    }

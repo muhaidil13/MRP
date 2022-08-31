@@ -30,7 +30,7 @@
     <div class="container" style="width:70vw;">
         <div class="background">
             <h3 class="text-login">Form Signup</h3>
-            <form class="row g-3" action="<?php echo BASE_URL?>/system/tambah_user" method="POST">
+            <form class="row g-3" action="<?php echo BASE_URL?>/system/signup" method="POST">
                 <div class="col-12">
                     <label for="nama_user" class="form-label">Nama Lengkap</label>
                     <input type="text" class="form-control" id="nama_user" name="nama_user">
@@ -38,17 +38,30 @@
                 <div class="col-12">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" name="username">
+                    <?php echo $data['usernameError']; ?>
+
                 </div>
                 <div class="col-12">
                     <label for="password" class="form-label">Password</label>
                     <input type="text" class="form-control" id="password" name="password">
-                </div>
-                <div class="col-6">
-                    <label for="level" class="form-label">Level</label>
-                    <input type="text" class="form-control" id="level" name="level">
+                    <?php echo $data['passwordError']; ?>
                 </div>
                 <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Login</button>
+                    <label for="passwordconfirm" class="form-label">Confrim password</label>
+                    <input type="text" class="form-control" id="passwordconfirm" name="passwordconfirm">
+                    <?php echo $data['confirmPasswordError']; ?>
+                </div>
+                <div class="col-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email">
+                    <?php echo $data['emailError']; ?>
+                </div>
+                <div class="col-6">
+                    <label for="level_id" class="form-label">Level</label>
+                    <input type="text" class="form-control" id="level_id" name="level_id">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Daftar</button>
                 </div>
             </form>
         </div>
